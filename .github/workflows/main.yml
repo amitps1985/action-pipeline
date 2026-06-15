@@ -3,7 +3,6 @@ on:
   workflow_dispatch: 
 jobs:
   my_first_job:
-  build:
     runs-on: ubuntu-latest
     steps:
       - name: greeting
