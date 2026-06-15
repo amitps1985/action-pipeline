@@ -5,6 +5,10 @@ jobs:
   my_first_job:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v6.0.3
       - name: greeting
         run: echo "hello DevOps"
+      - name: list of command
+        run: ls -a
    
