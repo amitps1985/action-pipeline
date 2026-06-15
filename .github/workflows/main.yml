@@ -1,0 +1,10 @@
+name: 1st-action-pipeline
+on: 
+  workflow_dispatch: 
+jobs:
+  my_first_job:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: greeting
+        run: echo "hello DevOps"
