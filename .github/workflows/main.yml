@@ -1,14 +1,18 @@
 name: 1st-action-pipeline
 on: 
   workflow_dispatch: 
+env:
+  fIRST_NAME: DevOps  
 jobs:
   my_first_job:
     runs-on: ubuntu-latest
+    env:
+      LAST_NAME: insider
     steps:
       - name: Checkout
         uses: actions/checkout@v6.0.3
       - name: greeting
-        run: echo "hello DevOps"
+        run: echo "hello, $FIRST_NAME LAST_NAME"
       - name: list of command
         run: ls -a
    
