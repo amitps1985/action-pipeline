@@ -4,13 +4,12 @@ on:
 jobs:
   my_first_job:
     runs-on: ubuntu-latest
-    env:
-      LAST_NAME: insider
+    
     steps:
       - name: Checkout
         uses: actions/checkout@v6.0.3
       - name: greeting of the day
-        run: echo "hello, ${{vars.FIRST_NAME}} $LAST_NAME"
+        run: echo "hello, ${{vars.FIRST_NAME}} ${{secrets.LAST_NAM}}"
       - name: list of command
         run: ls -a
    
