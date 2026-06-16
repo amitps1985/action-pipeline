@@ -9,7 +9,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6.0.3
       - name: greeting of the day
-        run: echo "hello, ${{vars.FIRST_NAME}} ${{secrets.LAST_NAM}}"
+        run: echo "hello, ${{vars.FIRST_NAME}} ${{secrets.LAST_NAME}}"
       - name: list of command
         run: ls -a
    
