@@ -7,9 +7,11 @@ jobs:
     runs-on: ubuntu-slim
     steps:
       - run: echo "My first job ran successful"
+      - run: cat servise yaml
   my_second_job:
     name: Second job
     needs: my_First_job
+    if: always()
     runs-on: ubuntu-slim
     steps:
       - run: echo "My second job ran successful"
