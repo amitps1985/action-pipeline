@@ -2,6 +2,10 @@
 name: Matrix Pipeline
 on:
  push: 
+   branches:
+     - main
+     - feature
+     - dev
 jobs:
   example_matrix:
     strategy:
