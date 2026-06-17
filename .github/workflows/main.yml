@@ -2,16 +2,12 @@
 on:
  push: 
 jobs:
-  my_First_job:
-    name: First job
-    runs-on: ubuntu-slim
+  example_matrix:
+    strategy:
+      os: [ubantu-latest, wandows-latest, macos-latest]
+    name: matrix job
+    runs-on: ${{ matrix.os }}
     steps:
-      - run: echo "My first job ran successful"
-      - run: cat servise yaml
-  my_second_job:
-    name: Second job
-    needs: my_First_job
-    if: always()
-    runs-on: ubuntu-slim
-    steps:
-      - run: echo "My second job ran successful"
+      - run: ech "hello world"
+      
+   
