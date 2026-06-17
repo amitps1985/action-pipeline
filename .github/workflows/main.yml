@@ -1,13 +1,15 @@
 # File: .github/workflows/workflow.yml
+name: Matrix Pipeline
 on:
  push: 
 jobs:
   example_matrix:
     strategy:
-      os: [ubantu-latest, wandows-latest, macos-latest]
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
     name: matrix job
     runs-on: ${{ matrix.os }}
     steps:
-      - run: ech "hello world"
+      - run: echo "hello world"
       
    
